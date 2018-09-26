@@ -1,6 +1,6 @@
 {
   "name": "draft-typescript-gpw",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "repository": "https://github.com/perelmangao/draft-typescript-gpw.git",
   "author": "Gao Peiwen <gpw0426@hotmail.com>",
@@ -19,5 +19,8 @@
     "html-to-draftjs": "^0.1.0-beta7",
     "react-draft-wysiwyg": "^1.8.4",
     "react-html-parser": "^2.0.2"
+  },
+  "scripts": {
+    "dev": "tsc -w"
   }
 }

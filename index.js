@@ -1,18 +1,23 @@
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    }
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-exports.__esModule = true;
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_draft_wysiwyg_1 = require("react-draft-wysiwyg");
 require("react-draft-wysiwyg/dist/react-draft-wysiwyg.css");
@@ -35,7 +40,7 @@ exports.draftToHtml = function (input) {
     if (typeof input === 'string') {
         return input;
     }
-    return draftjs_to_html_1["default"].apply(void 0, [input].concat(options));
+    return draftjs_to_html_1.default.apply(void 0, [input].concat(options));
 };
 /**
  * convert html to Draft State
@@ -48,7 +53,7 @@ exports.htmlToDraft = function (content) {
      * catch other editor's content.
      */
     try {
-        blocksFromHTML = html_to_draftjs_1["default"](content);
+        blocksFromHTML = html_to_draftjs_1.default(content);
     }
     catch (error) {
         blocksFromHTML = draft_js_1.convertFromHTML(content);
@@ -87,7 +92,7 @@ exports.draftStateToHTML = function (content) {
         return;
     var getEditorContent = draft_js_1.EditorState.createWithContent(draft_js_1.convertFromRaw(JSON.parse(content)));
     var html = draft_js_export_html_1.stateToHTML(getEditorContent.getCurrentContent());
-    return react_html_parser_1["default"](html);
+    return react_html_parser_1.default(html);
 };
 /**
  * an empty state
@@ -108,7 +113,7 @@ var Draft = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Draft.prototype.render = function () {
-        return <react_draft_wysiwyg_1.Editor wrapperClassName="react-wysiwyg-typescript-wrapper" editorClassName="react-wysiwyg-typescript-editor" toolbarClassName="react-wysiwyg-typescript-toolbar" placeholder="" toolbar={this.props.toolbar} locale={this.props.locale} {...this.props}/>;
+        return React.createElement(react_draft_wysiwyg_1.Editor, __assign({ wrapperClassName: "react-wysiwyg-typescript-wrapper", editorClassName: "react-wysiwyg-typescript-editor", toolbarClassName: "react-wysiwyg-typescript-toolbar", placeholder: "", toolbar: this.props.toolbar, locale: this.props.locale }, this.props));
     };
     Draft.defaultProps = {
         toolbar: {
@@ -127,4 +132,5 @@ var Draft = /** @class */ (function (_super) {
     };
     return Draft;
 }(React.Component));
-exports["default"] = Draft;
+exports.default = Draft;
+//# sourceMappingURL=index.js.map
