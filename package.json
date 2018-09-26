@@ -1,0 +1,23 @@
+{
+  "name": "draft-typescript-gpw",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/perelmangao/draft-typescript-gpw.git",
+  "author": "Gao Peiwen <gpw0426@hotmail.com>",
+  "license": "MIT",
+  "typings": "index.d.ts",
+  "devDependencies": {
+    "@types/react": "^15.0.16",
+    "react": "^15.4.2",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "@types/draft-js": "^0.10.0",
+    "draft-js": "^0.10.0",
+    "draft-js-export-html": "^1.2.0",
+    "draftjs-to-html": "^0.7.0",
+    "html-to-draftjs": "^0.1.0-beta7",
+    "react-draft-wysiwyg": "^1.8.4",
+    "react-html-parser": "^2.0.2"
+  }
+}
