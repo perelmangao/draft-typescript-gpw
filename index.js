@@ -117,7 +117,7 @@ var Draft = /** @class */ (function (_super) {
     };
     Draft.defaultProps = {
         toolbar: {
-            options: ['inline', 'colorPicker', 'blockType', 'fontSize', 'link', 'image', 'list', 'textAlign', 'remove', 'history'],
+            options: ['inline', 'colorPicker', 'blockType', 'fontSize', 'link', 'image','emoji', 'list', 'textAlign', 'remove', 'history'],
             inline: {
                 options: ['bold', 'italic', 'underline', 'strikethrough']
             },
