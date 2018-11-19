@@ -264,7 +264,7 @@ export interface DraftProps {
             uploadEnabled: true,
             alignmentEnabled: false,
             uploadCallback: undefined,
-            defaultSize: { height: 'auto', width: '100%' }
+            defaultSize: { height: '100%', width: '100%' }
         }>
         remove: Partial<{ icon: 'eraser', className?: string }>
         history: Partial<{
